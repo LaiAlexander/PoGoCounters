@@ -10,11 +10,10 @@ gc = gspread.authorize(credentials)
 wks = gc.open("PoGo Raid Counters").sheet1
 
 col1 = wks.col_values(1)
-col2 = wks.col_values(2)
 
 print("Spreadsheet opened\n")
 i = 1
 for value in col1:
     if value:
-            print(wks.cell(i, 1).value + "   " + wks.cell(i, 2).value)
+        print(wks.cell(i, 1).value + "   " + wks.cell(i, 2).value + "   " + wks.cell(i, 3).value)
     i = i + 1
