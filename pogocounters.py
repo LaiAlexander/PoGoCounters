@@ -18,7 +18,7 @@ all_records = wks.get_all_records()
 print("All records have been fetched\n", flush=True)
 
 keys = []
-for key in all_records[1]:
+for key in all_records[0]:
     keys.append(key)
 print(" | ".join(keys))
 #print(all_records[1].keys()) # not what I want
